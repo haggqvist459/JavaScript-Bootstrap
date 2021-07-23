@@ -2,8 +2,6 @@ let cards = new Array();
 let currentCard = 0;
 let showFrontOfCard = true;
 
-
-
 const init = () => {
         getCards();
         updateUI();
@@ -25,7 +23,6 @@ const updateUI = () => {
                 currentCard = 0;
         }
 }
-
 
 const getCards = () => {
         try {
