@@ -1,6 +1,5 @@
 let cards = new Array();
 
-
 const clearUI = () => {
         document.getElementById('frontOfCard').value = '';
         document.getElementById('backOfCard').value = '';
@@ -22,10 +21,11 @@ const storeCards = () => {
 
 const getCards = () => {
         try {
-                let jsonCards = localStorage.getItem('cards');
-                cards = JSON.parse(jsonCards);
-                console.log("reviewFlashCards cards: ", cards);
-                document.getElementById('numOfCards').innerHTML = cards.length;
+                if (localStorage.getItem('cards')){
+                        cards = JSON.parse(localStorage.getItem('cards'));
+                        console.log("reviewFlashCards cards: ", cards);
+                        document.getElementById('numOfCards').innerHTML = cards.length;
+                }
         } catch (error) {
                 console.log("error @getCards(): ", error.message);
         }
@@ -34,10 +34,7 @@ const getCards = () => {
 
 const saveCard = (e) => {
         e.preventDefault();
-        let frontContent = document.getElementById('frontOfCard').value;
-        let backContent = document.getElementById('backOfCard').value;
-        let flashCard = {front: frontContent, back: backContent};
-        cards.push(flashCard);
+        cards.push({front: document.getElementById('frontOfCard').value, back: document.getElementById('backOfCard').value})
         console.log(cards);
         clearUI();
         numOfCards();
