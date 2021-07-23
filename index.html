@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html>
-        <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit">
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-                <title>Flash Cards</title>
-        </head>
-        <body>
-                <h1>Temp Flash Cards Title</h1>
-                <script src="flashcards.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        </body>
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+        <title>Flash Cards</title>
+</head>
+
+<body>
+        <div class="container">
+                <div class="row">
+                        <h1>Flash Cards!</h1>
+                </div>
+                <div class="row">
+                        <div class="col">
+                                <form>
+                                        <label for="front">Front of Card</label>
+                                        <textarea id="frontOfCard" class="form-control" rows="3"></textarea>
+                                        <label for="back">Back of Card</label>
+                                        <textarea id="backOfCard" class="form-control" rows="3"></textarea>
+                                        <button class="btn btn-primary btn-lg btn-block mt-3" id="btnSave">Save Card</button>
+                                </form>
+                        </div>
+                        <div class="col">
+                                <h2>Create a flash card</h2>
+                                <p> Put the term or question to remember on the front of the card, and the definition or
+                                        answer on the back.</p>
+                                <p> Number of cards: <span id="numOfCards">0</span></p>
+                                <button type="button" class="btn btn-primary btn-lg btn-block mt-3" onclick="window.location.href='reviewCards.html'"> Review Cards </button>
+                        </div>
+                </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                crossorigin="anonymous"></script>
+        <script src="flashcards.js"></script>
+</body>
+
 </html>
